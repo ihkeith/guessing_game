@@ -9,7 +9,21 @@ NOTE: If you strongly prefer to work locally on your own computer, you can total
 
 """
 
-import random
+import random, time
+
+def display_welcome():
+    time.sleep(.5)
+    print("=" * 71)
+    time.sleep(.5)
+    print("Welcome to the Number Counting Game!")
+    time.sleep(1)
+    print("Pick a number between 1 and 10.")
+    time.sleep(1)
+    print("We'll let you know if you guess too high or too low.")
+    time.sleep(1)
+    print("Good Luck!!!!!")
+    time.sleep(.5)
+    print("=" * 71)
 
 
 def start_game():
@@ -31,7 +45,33 @@ def start_game():
     """
     # write your code inside this function.
 
+    display_welcome()
+
+    secret_number = random.randint(1, 10)
+    player_guess = ""
+    guesses = 0
+
+    while player_guess != secret_number:
+        player_guess = input("Please pick a number >  ")
+        guesses += 1
+        try:
+            player_guess = int(player_guess)
+            pass
+        except ValueError as err:
+            print("That isn't a valid number. Please try again.")
+            continue
+        if player_guess == secret_number:
+            print("Got it!")
+            print("It took you {} guesses.".format(guesses))
+            break
+        elif player_guess < secret_number:
+            print("You guessed too low. The secret number is higher. Try again.")
+            continue
+        elif player_guess > secret_number:
+            print("You guessed too high. The secret number is lower. Try again.")
+            continue
+
 
 if __name__ == '__main__':
-    # Kick off the program by calling the start_game function.
+    # Kick off the program by calling the start_game function
     start_game()
