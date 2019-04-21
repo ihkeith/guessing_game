@@ -63,6 +63,8 @@ def start_game():
         if player_guess == secret_number:
             print("Got it!")
             print("It took you {} guesses.".format(guesses))
+            time.sleep(.5)
+            print("Thanks for playing; have a fantasic day!!")
             break
         elif player_guess < secret_number:
             print("You guessed too low. The secret number is higher. Try again.")
