@@ -18,4 +18,13 @@ Team Treehouse Python Techdegree Project 1: A Number Guessing Game
 
 ## My Approach
 
-Using the pseudocode given in the Starter File, I went line by line and built each requirement, tested it, then moved on to the next step. I decided to add some time.sleep() calls to give the text some breathing room. I did have to research the list.sort() method to give me a sorted list so that I could display the 'high' score.  A while loop seemed the best to use for the game loop. I used a try block to convert the input string to an int. For the > 10 < 0 check, I felt that if statements were a good fit. I also decided to make invalid guesses count against the player and increment the guess counter.
+Using the pseudocode given in the Starter File, I went line by line and built each requirement, tested it, then moved on to the next step. I decided to add some time.sleep() calls to give the text some breathing room. I did have to research the list.sort() method to give me a sorted list so that I could display the 'high' score.  A while loop seemed the best to use for the game loop. I used a try block to convert the input string to an int. For the > 10 < 0 check, I felt that if statements were a good fit. I also decided to make invalid guesses count against the player and increment the guess counter. We had a choice to try for Meets Expectations or Exceeds Expecations and for this project, I decided to try for Exceeds.
+
+## What I learned
+
+- Taking project requirements
+- Using user stories and pseudocode to break requirements into individual pieces
+- Testing each step
+- Researching when I get stuck
+- Keeping track of changes in Git
+- While loops, list sorting, error catching, if statements

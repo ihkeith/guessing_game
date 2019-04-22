@@ -9,6 +9,8 @@ NOTE: If you strongly prefer to work locally on your own computer, you can total
 
 """
 
+# Information on list sorting was found here: https://docs.python.org/3.3/howto/sorting.html
+
 import random, time
 
 def display_welcome():
