@@ -55,8 +55,6 @@ def start_game():
 
    # while player_guess != secret_number:
     while play_a_game.lower() == 'yes':
-        if high_score:
-            print("The current high score is {}".format(high_score[0]))
         player_guess = input("Please pick a number >  ")
         guesses += 1
         try:
@@ -78,7 +76,10 @@ def start_game():
             print("It took you {} guesses.".format(guesses))
             time.sleep(.5)
             play_a_game = input("Would you like to play again? Yes/no  ")
+            if high_score:
+                print("The current high score is {}".format(high_score[0]))
             if play_a_game.lower() == 'no':
+                time.sleep(1)
                 print("Thanks for playing; have a fantasic day!!")
                 break
             else:
