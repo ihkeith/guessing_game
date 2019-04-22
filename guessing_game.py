@@ -26,7 +26,7 @@ def start_game():
     high_score = []
     play_a_game = input("Would you like to play? Yes/no  ")
 
-    while play_a_game.lower() == 'yes':
+    while play_a_game:
         player_guess = input("Please pick a number >  ")
         guesses += 1
         try:
@@ -56,6 +56,7 @@ def start_game():
                 break
             else:
                 guesses = 0
+                secret_number = random.randint(1, 10)
         elif player_guess < secret_number:
             print("You guessed too low. The secret number is higher. Try again.")
             continue
