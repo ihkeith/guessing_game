@@ -57,7 +57,7 @@ def start_game():
         try:
             player_guess = int(player_guess)
             pass
-        except ValueError as err:
+        except ValueError:
             print("That isn't a valid number. Please try again.")
             continue
         if player_guess == secret_number:
